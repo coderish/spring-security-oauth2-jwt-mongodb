@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      username: admin
+      password: admin
+      port: 27017
+      database: admin
+
+management:
+  server:
+    port: 8081
+  health:
+    mongo:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always

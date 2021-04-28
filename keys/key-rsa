@@ -1,0 +1,11 @@
+# For the later token exchange we first generate a JWT token keystore
+
+keytool -genkeypair -alias jwt -keyalg RSA -dname "CN=codeclef-jwt, L=Bangalore, S=Karnataka, C=IN" -keypass qwerty123# -keystore jwt.jks -storepass qwerty123#
+
+
+
+# Generate the public key for out keystore
+
+keytool -list -rfc --keystore jwt.jks
+OR
+openssl x509 -inform pem -pubkey
